@@ -1,4 +1,4 @@
-
+"Make sure to do `sudo apt install vim` cause some of these plugins don't work without it"
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""
