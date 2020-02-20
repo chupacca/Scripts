@@ -1,4 +1,5 @@
 "Make sure to do `sudo apt install vim` cause some of these plugins don't work without it"
+"Also do `sudo apt intall vim-gtk` (can copy to clipboard)
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""
