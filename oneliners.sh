@@ -1,6 +1,10 @@
 #!/bin/bash
 
-#Have an execution go in the background and still be active
+#You can also start a program as a background job with an "&" on the command line.
+myprogram &
+
+#Note that output (both stdout and stderr) will still go to the current tty, 
+# so it's generally a good idea to redirect to /dev/null or to a log file, like so:
 myprogram > ~/program.log 2>&1 &
 
 #One liner for loops
