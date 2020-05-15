@@ -1,0 +1,22 @@
+Set-ExecutionPolicy so that you can execute stuff:
+ https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7
+ 
+Windows Debloater:
+ https://github.com/Sycnex/Windows10Debloater
+
+Windows Package Manager:
+  https://scoop.sh
+
+Terminal (cmder):
+  https://cmder.net/
+  
+GDB:
+  scoop install gdb
+
+.gdbinit (with color and conext printing)
+  https://github.com/gdbinit/gdbinit
+  https://stackoverflow.com/questions/209534/how-to-highlight-and-color-gdb-output-during-interactive-debugging
+
+For tools like `strace` and `ltrace` use mingw:
+  https://osdn.net/projects/mingw/releases/
+  Search 'mingw-get-setup.exe'
