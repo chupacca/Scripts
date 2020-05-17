@@ -2,22 +2,22 @@
 INITIAL SETUP
 ---------------------------------------------------------
 
-Set-ExecutionPolicy so that you can execute stuff:
- https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7
++ Set-ExecutionPolicy so that you can execute stuff:
+   https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7
  
-Windows Debloater:
- https://github.com/Sycnex/Windows10Debloater
++ Windows Debloater:
+   https://github.com/Sycnex/Windows10Debloater
 
 ---------------------------------------------------------
 PACKAGE MANAGERS
 ---------------------------------------------------------
 
 Windows Package Manager:
-  https://scoop.sh
+ https://scoop.sh
   `Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')`
 
 Chocolately Package Manager:
-  https://chocolatey.org/docs/installation
+ https://chocolatey.org/docs/installation
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
@@ -27,14 +27,14 @@ TERMINAL
 ---------------------------------------------------------
 
 Terminal (cmder):
-  https://cmder.net/
+ https://cmder.net/
 
 ---------------------------------------------------------
 COMMAND LINE TOOLS SETUP
 ---------------------------------------------------------
 
 GDB:
-  scoop install gdb
+ `scoop install gdb`
 
 .gdbinit (with color and conext printing)
   https://github.com/gdbinit/gdbinit
@@ -51,9 +51,18 @@ GHIDRA
 Setting Up Ghidra:
   + Install chocolately package manager:
      https://chocolatey.org/docs/installation
+     
   + Install Java Packages:
      - https://chocolatey.org/packages/javaruntime
         `choco install javaruntime`
      - https://chocolatey.org/packages?q=jdk
-        `choco install ojdkbuild11`
-  
+        `choco install ojdkbuild#`
+        
+  + Should see something called `ghidraRun`
+     - Send to Desktop
+     - Right-Click -> Properties -> Change Icon... -> 
+        Go to ghidra folder and search for `.icon`
+     - When you click it'll ask for jdk directory
+        C:\Program Files\ojdkbuild\java-#-openjdk-#
+
+---------------------------------------------------------
