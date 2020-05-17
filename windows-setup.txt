@@ -1,15 +1,38 @@
+---------------------------------------------------------
+INITIAL SETUP
+---------------------------------------------------------
+
 Set-ExecutionPolicy so that you can execute stuff:
  https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7
  
 Windows Debloater:
  https://github.com/Sycnex/Windows10Debloater
 
+---------------------------------------------------------
+PACKAGE MANAGERS
+---------------------------------------------------------
+
 Windows Package Manager:
   https://scoop.sh
+  `Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')`
+
+Chocolately Package Manager:
+  https://chocolatey.org/docs/installation
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+
+---------------------------------------------------------
+TERMINAL
+---------------------------------------------------------
 
 Terminal (cmder):
   https://cmder.net/
-  
+
+---------------------------------------------------------
+COMMAND LINE TOOLS SETUP
+---------------------------------------------------------
+
 GDB:
   scoop install gdb
 
@@ -20,3 +43,17 @@ GDB:
 For tools like `strace` and `ltrace` use mingw:
   https://osdn.net/projects/mingw/releases/
   Search 'mingw-get-setup.exe'
+
+---------------------------------------------------------
+GHIDRA
+---------------------------------------------------------
+
+Setting Up Ghidra:
+  + Install chocolately package manager:
+     https://chocolatey.org/docs/installation
+  + Install Java Packages:
+     - https://chocolatey.org/packages/javaruntime
+        `choco install javaruntime`
+     - https://chocolatey.org/packages?q=jdk
+        `choco install ojdkbuild11`
+  
