@@ -57,12 +57,14 @@ Setting Up Ghidra:
         `choco install javaruntime`
      - https://chocolatey.org/packages?q=jdk
         `choco install ojdkbuild#`
-        
-  + Should see something called `ghidraRun`
+  
+  + Setting up Icon
+     - Should see something called `ghidraRun`
      - Send to Desktop
      - Right-Click -> Properties -> Change Icon... -> 
         Go to ghidra folder and search for `.icon`
-     - When you click it'll ask for jdk directory
+        
+   + When you click 'ghidraRun' ask for jdk directory
         C:\Program Files\ojdkbuild\java-#-openjdk-#
-
+        
 ---------------------------------------------------------
