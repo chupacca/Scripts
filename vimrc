@@ -12,7 +12,7 @@ syntax enable
 " COLOR SCHEME
 " colorscheme morning
 " colo koehler
-" colo elflord
+colo elflord
 
 " Enable 256 colors palette in Gnome Terminal
 " if $COLORTERM == 'gnome-terminal'
