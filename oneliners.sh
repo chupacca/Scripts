@@ -7,6 +7,10 @@ myprogram &
 # so it's generally a good idea to redirect to /dev/null or to a log file, like so:
 myprogram > ~/program.log 2>&1 &
 
+#Linking a one file to another
+ln -s <directoyr>/<file-to-be-linked> <directory>/<file-name>
+        ^--- these directory is necessary ----^
+
 #One liner for loops
 for i in {1..5}; do echo "\\e[${i}m"; done
 
