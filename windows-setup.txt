@@ -28,6 +28,13 @@ TERMINAL
 
 Terminal (cmder):
  https://cmder.net/
+ 
+ + Cmder by itself does not play nice with vim, BUT
+   if you run:
+    λ powershell
+    PS C:\> vi <file>
+    PS C:\> exit
+    λ <--- you're back to cmder temrinal
 
 ---------------------------------------------------------
 COMMAND LINE TOOLS SETUP
