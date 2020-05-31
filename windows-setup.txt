@@ -78,6 +78,14 @@ COMMAND LINE TOOLS SETUP
      https://github.com/gdbinit/gdbinit
      https://stackoverflow.com/questions/209534/how-to-highlight-and-color-gdb-output-during-interactive-debugging
 
++ Import python packages within gdb
+  https://stackoverflow.com/questions/43587020/how-to-install-python-packages-to-embedded-python-in-gdb-clion2017-1
+    $ gdb -q
+    (gdb) python
+    >import matplotlib
+    >end
+    (gdb) 
+
 + For tools like `strace`, you use mingw too (msys2 has this too):
    https://osdn.net/projects/mingw/releases/
    Search 'mingw-get-setup.exe'
