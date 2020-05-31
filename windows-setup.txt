@@ -40,17 +40,45 @@ Terminal (cmder):
 COMMAND LINE TOOLS SETUP
 ---------------------------------------------------------
 
-GDB:
- `scoop install gdb`
++ GDB:
+   `scoop install gdb`
 
-.gdbinit (with color and conext printing)
-  https://github.com/gdbinit/gdbinit
-  https://stackoverflow.com/questions/209534/how-to-highlight-and-color-gdb-output-during-interactive-debugging
+   .gdbinit (with color and conext printing)
+    https://github.com/gdbinit/gdbinit
+    https://stackoverflow.com/questions/209534/how-to-highlight-and-color-gdb-output-during-interactive-debugging
 
-For tools like `strace` and `ltrace` use mingw:
-  https://osdn.net/projects/mingw/releases/
-  Search 'mingw-get-setup.exe'
++ For tools like `strace`, use mingw:
+   https://osdn.net/projects/mingw/releases/
+   Search 'mingw-get-setup.exe'
 
++ For tools like `ltrace`, use `drltrace`:
+  https://github.com/mxmssh/drltrace
+  https://github.com/mxmssh/drltrace/releases
+ - Download the 'drltrace_win64.7z'
+ - `scoop install 7zip`
+ - `7z x drltrace_win64.71`
+ 
+ - Make downloaded .exe as a command on terminal
+   https://superuser.com/questions/689333/how-to-add-installed-program-to-command-prompt-in-windows   
+      You need to add drltrace.exe to the path in Windows.
+      You can get the full path to drltrace.exe by right clicking the shortcut and selecting the entire Target
+       * Right click `My Computer` or `This PC`
+       * Click Properties
+       * Click Advanced System Settings
+       * Click Environment Variables
+       * In the bottom pane find Path, select it and click Edit
+       * Click New 
+            OR
+         After the last ;, 
+         Add the full path to the folder containing drltrace.exe 
+       * Click OK
+       * Open new terminal or restart terminal
+       * You can now run `drltrace`
+   Now you should be able to launch drltrace from the command line, or from Start\Run
+   PS: Make sure to restart the CMD application before trying it out.
+   You will need to open a new CMD window after the changes have been made.   
+   
+   
 ---------------------------------------------------------
 GHIDRA
 ---------------------------------------------------------
