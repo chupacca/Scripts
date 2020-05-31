@@ -78,6 +78,9 @@ COMMAND LINE TOOLS SETUP
    PS: Make sure to restart the CMD application before trying it out.
    You will need to open a new CMD window after the changes have been made.   
    
+ - How to use: 
+    `drltrace -logdir . -- <binary>.exe`
+     ^this will dump a bung of .log files in the current directory that has the trace
    
 ---------------------------------------------------------
 GHIDRA
