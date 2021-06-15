@@ -18,19 +18,27 @@ Video Thumbnails:
    ```
 
 [Ubuntu 20]: https://linuxconfig.org/ubuntu-20-04-ffmpeg-installation
-$ sudo apt update
-$ sudo apt install ffmpeg
-$ sudo apt update
-$ sudo apt install libopus-dev libmp3lame-dev libfdk-aac-dev libvpx-dev libx264-dev yasm libass-dev libtheora-dev libvorbis-dev mercurial cmake build-essential
+$ sudo apt update    
 
-$ mkdir ~/ffmpeg; cd ~/ffmpeg
-$ hg clone https://bitbucket.org/multicoreware/x265
-$ cd x265/build/linux 
-$ PATH="$HOME/bin:$PATH" cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX="$HOME/ffmpeg_build" -DENABLE_SHARED:bool=off ../../source && PATH="$HOME/bin:$PATH" 
-$ sudo make && sudo make install
+$ sudo apt install ffmpeg    
 
-$ if [ -d ~/ffmpeg ]; then cd ~/ffmpeg; else mkdir ~/ffmpeg && cd ~/ffmpeg; fi
-$ wget -O- http://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2 | tar xj
+$ sudo apt update    
+
+$ sudo apt install libopus-dev libmp3lame-dev libfdk-aac-dev libvpx-dev libx264-dev yasm libass-dev libtheora-dev libvorbis-dev mercurial cmake build-essential    
+
+$ mkdir ~/ffmpeg; cd ~/ffmpeg    
+
+$ hg clone https://bitbucket.org/multicoreware/x265   
+
+$ cd x265/build/linux    
+
+$ PATH="$HOME/bin:$PATH" cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX="$HOME/ffmpeg_build" -DENABLE_SHARED:bool=off ../../source && PATH="$HOME/bin:$PATH"   
+
+$ sudo make && sudo make install  
+
+$ if [ -d ~/ffmpeg ]; then cd ~/ffmpeg; else mkdir ~/ffmpeg && cd ~/ffmpeg; fi  
+
+$ wget -O- http://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2 | tar xj  
 
 $ cd ~/ffmpeg/ffmpeg
 PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" \
