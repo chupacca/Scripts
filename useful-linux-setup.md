@@ -1,12 +1,14 @@
 Video Thumbnails:
   https://askubuntu.com/questions/1034595/thumbnails-not-showing-in-video-in-ubuntu-18-04
+  
   sudo apt install ffmpegthumbnailer
   
   sudo apt install gstreamer1.0-libav
   
-  sudo apt-get install ffmpeg ffmpegthumbnailer gstreamer0.10-ffmpeg
+  sudo apt-get install ffmpeg ffmpegthumbnailer gstreamer*
   
   rm -rf ~/.cache/thumbnails/*
+  
   rm -r ~/.cache/thumbnails/fail
   
   sudo vi /usr/share/thumbnailers/totem.thumbnailer
@@ -41,27 +43,7 @@ $ if [ -d ~/ffmpeg ]; then cd ~/ffmpeg; else mkdir ~/ffmpeg && cd ~/ffmpeg; fi
 $ wget -O- http://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2 | tar xj  
 
 $ cd ~/ffmpeg/ffmpeg
-PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" \
-   ./configure \
-  --prefix="$HOME/ffmpeg_build" \
-  --pkg-config-flags="--static" \
-  --extra-cflags="-I$HOME/ffmpeg_build/include" \
-  --extra-ldflags="-L$HOME/ffmpeg_build/lib" \
-  --extra-libs="-lpthread -lm" \
-  --bindir="$HOME/bin" \
-  --enable-gpl \
-  --enable-libass \
-  --enable-libfdk-aac \
-  --enable-libfreetype \
-  --enable-libmp3lame \
-  --enable-libopus \
-  --enable-libtheora \
-  --enable-libvorbis \
-  --enable-libvpx \
-  --enable-libx264 \
-  --enable-libx265 \
-  --enable-nonfree && \
-PATH="$HOME/bin:$PATH" sudo make && sudo make install
+PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./configure --prefix="$HOME/ffmpeg_build" --pkg-config-flags="--static" --extra-cflags="-I$HOME/ffmpeg_build/include" --extra-ldflags="-L$HOME/ffmpeg_build/lib" --extra-libs="-lpthread -lm" --bindir="$HOME/bin" --enable-gpl --enable-libass --enable-libfdk-aac --enable-libfreetype --enable-libmp3lame --enable-libopus --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libx264 --enable-libx265 --enable-nonfree && PATH="$HOME/bin:$PATH" sudo make && sudo make install
 
 
 
